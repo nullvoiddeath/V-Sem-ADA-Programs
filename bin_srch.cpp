@@ -18,7 +18,7 @@ int main()
 	{	mid=(low+high)/2;
 		if( k == a[mid])
 		{
-			cout<<"Element found at: "<<mid+1<<"\n";
+			cout<<"1"<<"\n";
 			return 0;
 		}
 		else if( k < a[mid])
@@ -27,6 +27,6 @@ int main()
 			low = mid + 1;
 		
 	}
-	cout<<"Element not found!\n";
+	cout<<"-1";
 	return 0;
 }
