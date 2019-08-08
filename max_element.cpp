@@ -1,14 +1,16 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
 	int n, a[100];
+	srand(time(NULL));
 	cout<<"Enter number of element: ";
 	cin>>n;
-	cout<<"Enter the array:";
+	cout<<"Array is:";
 	for(int i = 0; i < n; i++)
 	{
-		cin>>a[i];
+		a[i]=rand() % 500 + 1;
+		cout<<a[i]<<" ";
 	}
 	int big = a[0];
 	for(int i=1 ; i<n ; i++)
@@ -16,6 +18,6 @@ int main()
 		if(big < a[i])
 		   big=a[i];
 	}
-	cout<<"Biggest element is: "<<big<<"\n";
+	cout<<"\nBiggest element is: "<<big<<"\n";
 	return 0;
 }

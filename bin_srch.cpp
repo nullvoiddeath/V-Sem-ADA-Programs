@@ -1,16 +1,35 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
+	srand(time(NULL));
 	int n,mid,low,high,a[100],k;
 	cout<<"Enter the number of elements: ";
 	cin>>n;
-	cout<<"Enter array: ";
+	cout<<"Array is: ";
 	for(int i=0;i<n;i++)
 	{
-		cin>>a[i];
+		a[i]=rand() % 200 + 1;
+		cout<<a[i]<<" ";
+	}
+	for(int i =0; i <n ; i++)
+	{
+		for(int j=0; j<n; j++)
+		{
+			if(a[i]<a[j])
+			{
+				int temp = a[i];
+				    a[i] = a[j];
+				    a[j] = temp;
+			}
+		}
 	}	
-	cout<<"Enter the element to be searched: ";
+	cout<<"\nSorted Array is: ";
+	for(int i=0;i<n;i++)
+	{
+		cout<<a[i]<<" ";
+	}
+	cout<<"\nEnter the element to be searched: ";
 	cin>>k;
 	low = 0;
 	high = n-1;
