@@ -103,11 +103,11 @@ int main()
 	selection(arr,n);
 	bubble(arr2,n);
 	mergesort(arr3,n);
-	cout<<"Sorted Array : ";
+	cout<<"Comparisons are : ";
 	for(int i=0;i<n;i++)
 		cout<<arr[i]<<" ";
-	cout<<"Comaprisons(Selection) : "<<count_s<<endl;
-	cout<<"Comparisons(Bubble) "<<count_b<<endl;
-	cout<<"Comparisons(Merge) "<<count_m <<endl;
+	cout<<"\nSelection : "<<count_s<<endl;
+	cout<<"Bubble: "<<count_b<<endl;
+	cout<<"Merge: "<<count_m <<endl;
 	cout<<endl; 
 }
